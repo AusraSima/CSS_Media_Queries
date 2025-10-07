@@ -54,38 +54,13 @@ main {
             text-align: left;
         }
     }
-
-    /* nav {
-        display: flex;
-        flex-direction: column;
-        background-color: #421d65;
-        flex-wrap: wrap;
-
-        a {
-            font-size: 1.5rem;
-            line-height: 2.5rem;
-            color: #e36ad9;
-            text-decoration: none;
-            text-align: center;
-            line-height: 3rem;
-            flex-grow: 1;
-
-            &:hover {
-                background-color: #7f32c7;
-            }
-        }
-
-        .active {
-            background-color: #1b0c28;
-        }
-    } */
 }
 
 nav {
     display: flex;
     flex-direction: column;
-    background-color: #421d65;
     flex-wrap: wrap;
+    background-color: #421d65;
 }
 
 nav a {
@@ -98,7 +73,6 @@ nav a {
     flex-grow: 1;
 }
 
-
 nav a:hover {
     background-color: #7f32c7;
 }
@@ -110,11 +84,11 @@ nav a.active {
 figure {
     position: relative;
     padding-bottom: 2rem;
-    flex-grow: 1;
+    flex-grow: 1;    
 
     img {
         width: 100%;
-        height: 50vh;
+        height: 50vh;        
         object-fit: cover;
     }
 
@@ -131,6 +105,8 @@ figure {
 .dogs {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1;
     padding-top: 2rem;
 
     div {
@@ -157,11 +133,28 @@ figure {
 
 @media only screen and (min-width: 768px) {
 
-    nav {
+    nav,
+    .dogs {
         flex-direction: row;
-        
-        
     }
 
+    a {
+        width: 50%;
+    }
     
+    
+    .dogs div {
+        width: 50%;
+        img {
+            
+            width: 100%;
+            padding: 10%;
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    a, .dogs div {
+        width: 20%;
+    }
 }
